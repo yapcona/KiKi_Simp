@@ -47,7 +47,7 @@
             // 
             // btnNext
             // 
-            btnNext.Location = new Point(12, 69);
+            btnNext.Location = new Point(293, 95);
             btnNext.Name = "btnNext";
             btnNext.Size = new Size(178, 71);
             btnNext.TabIndex = 1;
@@ -57,7 +57,7 @@
             // 
             // btnExit
             // 
-            btnExit.Location = new Point(293, 367);
+            btnExit.Location = new Point(293, 212);
             btnExit.Name = "btnExit";
             btnExit.Size = new Size(178, 71);
             btnExit.TabIndex = 2;

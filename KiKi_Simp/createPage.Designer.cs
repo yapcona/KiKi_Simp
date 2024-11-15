@@ -119,7 +119,7 @@
             Controls.Add(txtPass);
             Controls.Add(label1);
             Name = "createPage";
-            Text = "createPage";
+            Text = "KiKi";
             ResumeLayout(false);
             PerformLayout();
         }
