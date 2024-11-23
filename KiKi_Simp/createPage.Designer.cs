@@ -32,10 +32,14 @@
             txtPass = new TextBox();
             label2 = new Label();
             label3 = new Label();
-            btnCopy = new Button();
             btnGenerate = new Button();
             saveFileDialog1 = new SaveFileDialog();
             btnHide_Show = new Button();
+            button2 = new Button();
+            checkBox1 = new CheckBox();
+            checkBox2 = new CheckBox();
+            checkBox3 = new CheckBox();
+            checkBox4 = new CheckBox();
             SuspendLayout();
             // 
             // label1
@@ -73,18 +77,9 @@
             label3.TabIndex = 4;
             label3.Click += label3_Click;
             // 
-            // btnCopy
-            // 
-            btnCopy.Location = new Point(112, 157);
-            btnCopy.Name = "btnCopy";
-            btnCopy.Size = new Size(200, 34);
-            btnCopy.TabIndex = 5;
-            btnCopy.Text = "Copy To Clipboard";
-            btnCopy.UseVisualStyleBackColor = true;
-            // 
             // btnGenerate
             // 
-            btnGenerate.Location = new Point(112, 107);
+            btnGenerate.Location = new Point(112, 262);
             btnGenerate.Name = "btnGenerate";
             btnGenerate.Size = new Size(200, 34);
             btnGenerate.TabIndex = 6;
@@ -98,28 +93,84 @@
             // 
             // btnHide_Show
             // 
+            btnHide_Show.BackColor = SystemColors.HighlightText;
             btnHide_Show.Location = new Point(565, 51);
             btnHide_Show.Name = "btnHide_Show";
-            btnHide_Show.Size = new Size(155, 34);
+            btnHide_Show.Size = new Size(200, 34);
             btnHide_Show.TabIndex = 7;
             btnHide_Show.Text = "Hide password";
-            btnHide_Show.UseVisualStyleBackColor = true;
+            btnHide_Show.UseVisualStyleBackColor = false;
             btnHide_Show.Click += btnHide_Show_Click;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(112, 302);
+            button2.Name = "button2";
+            button2.Size = new Size(200, 34);
+            button2.TabIndex = 9;
+            button2.Text = "Copy To Clipboard";
+            button2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            checkBox1.AutoSize = true;
+            checkBox1.Location = new Point(112, 112);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(161, 29);
+            checkBox1.TabIndex = 10;
+            checkBox1.Text = "Use Lower Case";
+            checkBox1.UseVisualStyleBackColor = true;
+            checkBox1.CheckedChanged += checkBox1_CheckedChanged;
+            // 
+            // checkBox2
+            // 
+            checkBox2.AutoSize = true;
+            checkBox2.Location = new Point(112, 147);
+            checkBox2.Name = "checkBox2";
+            checkBox2.Size = new Size(163, 29);
+            checkBox2.TabIndex = 11;
+            checkBox2.Text = "Use Upper Case";
+            checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox3
+            // 
+            checkBox3.AutoSize = true;
+            checkBox3.Location = new Point(112, 182);
+            checkBox3.Name = "checkBox3";
+            checkBox3.Size = new Size(145, 29);
+            checkBox3.TabIndex = 12;
+            checkBox3.Text = "Use Numbers";
+            checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // checkBox4
+            // 
+            checkBox4.AutoSize = true;
+            checkBox4.Location = new Point(112, 217);
+            checkBox4.Name = "checkBox4";
+            checkBox4.Size = new Size(140, 29);
+            checkBox4.TabIndex = 13;
+            checkBox4.Text = "Use Symbols";
+            checkBox4.UseVisualStyleBackColor = true;
             // 
             // createPage
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(checkBox4);
+            Controls.Add(checkBox3);
+            Controls.Add(checkBox2);
+            Controls.Add(checkBox1);
+            Controls.Add(button2);
             Controls.Add(btnHide_Show);
             Controls.Add(btnGenerate);
-            Controls.Add(btnCopy);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(txtPass);
             Controls.Add(label1);
             Name = "createPage";
             Text = "KiKi";
+            Load += createPage_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -130,9 +181,13 @@
         private TextBox txtPass;
         private Label label2;
         private Label label3;
-        private Button btnCopy;
         private Button btnGenerate;
         private SaveFileDialog saveFileDialog1;
         private Button btnHide_Show;
+        private Button button2;
+        private CheckBox checkBox1;
+        private CheckBox checkBox2;
+        private CheckBox checkBox3;
+        private CheckBox checkBox4;
     }
 }
