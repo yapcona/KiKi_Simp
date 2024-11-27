@@ -13,6 +13,8 @@ namespace KiKi_Simp
     public partial class createPage : Form
     {
         private bool useLowerCase = true; // Standardmäßig auf true setzen
+        private bool useUpperCase = true;
+        private bool useNumbers = true;
 
         public createPage()
         {
@@ -36,7 +38,7 @@ namespace KiKi_Simp
 
         private void btnGenerate_Click(object sender, EventArgs e)
         {
-            int counter = 10; // Passwortlänge (individuell anpassen)
+            int counter = 10; // Passwortlänge (will do it later: individuell anpassen)
             string PassLowerCase = "abcdefghijklmnopqrstuvwxyz";
             string PassUpperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
             string PassNumbers = "1234567890";
@@ -51,7 +53,16 @@ namespace KiKi_Simp
                 allChars += PassLowerCase;
                 res.Append(PassLowerCase[random.Next(PassLowerCase.Length)]);
             }
-            allChars += PassUpperCase + PassNumbers + PassSymbols;
+
+            if (useUpperCase)
+            {
+                allChars += PassUpperCase;
+                res.Append(PassLowerCase[random.Next(PassLowerCase.Length)]);
+            }
+
+            if ()
+
+                allChars += PassUpperCase + PassNumbers + PassSymbols;
             res.Append(PassUpperCase[random.Next(PassUpperCase.Length)]);
             res.Append(PassNumbers[random.Next(PassNumbers.Length)]);
             res.Append(PassSymbols[random.Next(PassSymbols.Length)]);
@@ -98,6 +109,21 @@ namespace KiKi_Simp
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             useLowerCase = checkBox1.Checked;
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            useUpperCase = checkBox2.Checked;
+        }
+
+        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        {
+            useNumbers = checkBox3.Checked;
+        }
+
+        private void checkBox4_CheckedChanged(object sender, EventArgs e)
+        {
+            useSymbols = checkBox4.Checked;
         }
     }
 }

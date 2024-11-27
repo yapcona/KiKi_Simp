@@ -45,43 +45,48 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(293, 9);
+            label1.Location = new Point(205, 5);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(96, 25);
+            label1.Size = new Size(65, 15);
             label1.TabIndex = 0;
             label1.Text = "KiKi (SIMP)";
             // 
             // txtPass
             // 
-            txtPass.Location = new Point(112, 52);
+            txtPass.Location = new Point(78, 31);
+            txtPass.Margin = new Padding(2);
             txtPass.Name = "txtPass";
-            txtPass.Size = new Size(447, 31);
+            txtPass.Size = new Size(314, 23);
             txtPass.TabIndex = 1;
             txtPass.TextChanged += txtPass_TextChanged;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(19, 55);
+            label2.Location = new Point(13, 33);
+            label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(87, 25);
+            label2.Size = new Size(57, 15);
             label2.TabIndex = 3;
             label2.Text = "Password";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(19, 116);
+            label3.Location = new Point(13, 70);
+            label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
-            label3.Size = new Size(0, 25);
+            label3.Size = new Size(0, 15);
             label3.TabIndex = 4;
             label3.Click += label3_Click;
             // 
             // btnGenerate
             // 
-            btnGenerate.Location = new Point(112, 262);
+            btnGenerate.Location = new Point(78, 157);
+            btnGenerate.Margin = new Padding(2);
             btnGenerate.Name = "btnGenerate";
-            btnGenerate.Size = new Size(200, 34);
+            btnGenerate.Size = new Size(140, 20);
             btnGenerate.TabIndex = 6;
             btnGenerate.Text = "Generate Password";
             btnGenerate.UseVisualStyleBackColor = true;
@@ -94,9 +99,10 @@
             // btnHide_Show
             // 
             btnHide_Show.BackColor = SystemColors.HighlightText;
-            btnHide_Show.Location = new Point(565, 51);
+            btnHide_Show.Location = new Point(396, 31);
+            btnHide_Show.Margin = new Padding(2);
             btnHide_Show.Name = "btnHide_Show";
-            btnHide_Show.Size = new Size(200, 34);
+            btnHide_Show.Size = new Size(140, 20);
             btnHide_Show.TabIndex = 7;
             btnHide_Show.Text = "Hide password";
             btnHide_Show.UseVisualStyleBackColor = false;
@@ -104,9 +110,10 @@
             // 
             // button2
             // 
-            button2.Location = new Point(112, 302);
+            button2.Location = new Point(78, 181);
+            button2.Margin = new Padding(2);
             button2.Name = "button2";
-            button2.Size = new Size(200, 34);
+            button2.Size = new Size(140, 20);
             button2.TabIndex = 9;
             button2.Text = "Copy To Clipboard";
             button2.UseVisualStyleBackColor = true;
@@ -114,9 +121,10 @@
             // checkBox1
             // 
             checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(112, 112);
+            checkBox1.Location = new Point(78, 67);
+            checkBox1.Margin = new Padding(2);
             checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(161, 29);
+            checkBox1.Size = new Size(108, 19);
             checkBox1.TabIndex = 10;
             checkBox1.Text = "Use Lower Case";
             checkBox1.UseVisualStyleBackColor = true;
@@ -125,38 +133,44 @@
             // checkBox2
             // 
             checkBox2.AutoSize = true;
-            checkBox2.Location = new Point(112, 147);
+            checkBox2.Location = new Point(78, 88);
+            checkBox2.Margin = new Padding(2);
             checkBox2.Name = "checkBox2";
-            checkBox2.Size = new Size(163, 29);
+            checkBox2.Size = new Size(108, 19);
             checkBox2.TabIndex = 11;
             checkBox2.Text = "Use Upper Case";
             checkBox2.UseVisualStyleBackColor = true;
+            checkBox2.CheckedChanged += checkBox2_CheckedChanged;
             // 
             // checkBox3
             // 
             checkBox3.AutoSize = true;
-            checkBox3.Location = new Point(112, 182);
+            checkBox3.Location = new Point(78, 109);
+            checkBox3.Margin = new Padding(2);
             checkBox3.Name = "checkBox3";
-            checkBox3.Size = new Size(145, 29);
+            checkBox3.Size = new Size(97, 19);
             checkBox3.TabIndex = 12;
             checkBox3.Text = "Use Numbers";
             checkBox3.UseVisualStyleBackColor = true;
+            checkBox3.CheckedChanged += checkBox3_CheckedChanged;
             // 
             // checkBox4
             // 
             checkBox4.AutoSize = true;
-            checkBox4.Location = new Point(112, 217);
+            checkBox4.Location = new Point(78, 130);
+            checkBox4.Margin = new Padding(2);
             checkBox4.Name = "checkBox4";
-            checkBox4.Size = new Size(140, 29);
+            checkBox4.Size = new Size(93, 19);
             checkBox4.TabIndex = 13;
             checkBox4.Text = "Use Symbols";
             checkBox4.UseVisualStyleBackColor = true;
+            checkBox4.CheckedChanged += checkBox4_CheckedChanged;
             // 
             // createPage
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(560, 270);
             Controls.Add(checkBox4);
             Controls.Add(checkBox3);
             Controls.Add(checkBox2);
@@ -168,6 +182,7 @@
             Controls.Add(label2);
             Controls.Add(txtPass);
             Controls.Add(label1);
+            Margin = new Padding(2);
             Name = "createPage";
             Text = "KiKi";
             Load += createPage_Load;
