@@ -15,6 +15,7 @@ namespace KiKi_Simp
         private bool useLowerCase = true; // Standardmäßig auf true setzen
         private bool useUpperCase = true;
         private bool useNumbers = true;
+        private bool useSymbols = true;
 
         public createPage()
         {
@@ -60,12 +61,19 @@ namespace KiKi_Simp
                 res.Append(PassLowerCase[random.Next(PassLowerCase.Length)]);
             }
 
-            if ()
+            if (useNumbers)
+            {
+                allChars += PassNumbers;
+                res.Append(PassNumbers[random.Next(PassNumbers.Length)]);
+            }
 
-                allChars += PassUpperCase + PassNumbers + PassSymbols;
-            res.Append(PassUpperCase[random.Next(PassUpperCase.Length)]);
-            res.Append(PassNumbers[random.Next(PassNumbers.Length)]);
-            res.Append(PassSymbols[random.Next(PassSymbols.Length)]);
+            if (useSymbols)
+            {
+                allChars += PassSymbols;
+                res.Append(PassSymbols[random.Next(PassSymbols.Length)]);
+            }
+
+   
 
             // Den Rest der Passwortlänge mit zufälligen Zeichen auffüllen
             for (int i = res.Length; i < counter; i++)
@@ -108,22 +116,22 @@ namespace KiKi_Simp
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            useLowerCase = checkBox1.Checked;
+            useLowerCase = checkBox_LowerCase.Checked;
         }
 
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
-            useUpperCase = checkBox2.Checked;
+            useUpperCase = checkBox_UpperCase.Checked;
         }
 
         private void checkBox3_CheckedChanged(object sender, EventArgs e)
         {
-            useNumbers = checkBox3.Checked;
+            useNumbers = checkBox_Numbers.Checked;
         }
 
         private void checkBox4_CheckedChanged(object sender, EventArgs e)
         {
-            useSymbols = checkBox4.Checked;
+            useSymbols = checkBox_Symbols.Checked;
         }
     }
 }

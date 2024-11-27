@@ -36,10 +36,10 @@
             saveFileDialog1 = new SaveFileDialog();
             btnHide_Show = new Button();
             button2 = new Button();
-            checkBox1 = new CheckBox();
-            checkBox2 = new CheckBox();
-            checkBox3 = new CheckBox();
-            checkBox4 = new CheckBox();
+            checkBox_LowerCase = new CheckBox();
+            checkBox_UpperCase = new CheckBox();
+            checkBox_Numbers = new CheckBox();
+            checkBox_Symbols = new CheckBox();
             SuspendLayout();
             // 
             // label1
@@ -118,63 +118,63 @@
             button2.Text = "Copy To Clipboard";
             button2.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // checkBox_LowerCase
             // 
-            checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(78, 67);
-            checkBox1.Margin = new Padding(2);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(108, 19);
-            checkBox1.TabIndex = 10;
-            checkBox1.Text = "Use Lower Case";
-            checkBox1.UseVisualStyleBackColor = true;
-            checkBox1.CheckedChanged += checkBox1_CheckedChanged;
+            checkBox_LowerCase.AutoSize = true;
+            checkBox_LowerCase.Location = new Point(78, 67);
+            checkBox_LowerCase.Margin = new Padding(2);
+            checkBox_LowerCase.Name = "checkBox_LowerCase";
+            checkBox_LowerCase.Size = new Size(108, 19);
+            checkBox_LowerCase.TabIndex = 10;
+            checkBox_LowerCase.Text = "Use Lower Case";
+            checkBox_LowerCase.UseVisualStyleBackColor = true;
+            checkBox_LowerCase.CheckedChanged += checkBox1_CheckedChanged;
             // 
-            // checkBox2
+            // checkBox_UpperCase
             // 
-            checkBox2.AutoSize = true;
-            checkBox2.Location = new Point(78, 88);
-            checkBox2.Margin = new Padding(2);
-            checkBox2.Name = "checkBox2";
-            checkBox2.Size = new Size(108, 19);
-            checkBox2.TabIndex = 11;
-            checkBox2.Text = "Use Upper Case";
-            checkBox2.UseVisualStyleBackColor = true;
-            checkBox2.CheckedChanged += checkBox2_CheckedChanged;
+            checkBox_UpperCase.AutoSize = true;
+            checkBox_UpperCase.Location = new Point(78, 88);
+            checkBox_UpperCase.Margin = new Padding(2);
+            checkBox_UpperCase.Name = "checkBox_UpperCase";
+            checkBox_UpperCase.Size = new Size(108, 19);
+            checkBox_UpperCase.TabIndex = 11;
+            checkBox_UpperCase.Text = "Use Upper Case";
+            checkBox_UpperCase.UseVisualStyleBackColor = true;
+            checkBox_UpperCase.CheckedChanged += checkBox2_CheckedChanged;
             // 
-            // checkBox3
+            // checkBox_Numbers
             // 
-            checkBox3.AutoSize = true;
-            checkBox3.Location = new Point(78, 109);
-            checkBox3.Margin = new Padding(2);
-            checkBox3.Name = "checkBox3";
-            checkBox3.Size = new Size(97, 19);
-            checkBox3.TabIndex = 12;
-            checkBox3.Text = "Use Numbers";
-            checkBox3.UseVisualStyleBackColor = true;
-            checkBox3.CheckedChanged += checkBox3_CheckedChanged;
+            checkBox_Numbers.AutoSize = true;
+            checkBox_Numbers.Location = new Point(78, 109);
+            checkBox_Numbers.Margin = new Padding(2);
+            checkBox_Numbers.Name = "checkBox_Numbers";
+            checkBox_Numbers.Size = new Size(97, 19);
+            checkBox_Numbers.TabIndex = 12;
+            checkBox_Numbers.Text = "Use Numbers";
+            checkBox_Numbers.UseVisualStyleBackColor = true;
+            checkBox_Numbers.CheckedChanged += checkBox3_CheckedChanged;
             // 
-            // checkBox4
+            // checkBox_Symbols
             // 
-            checkBox4.AutoSize = true;
-            checkBox4.Location = new Point(78, 130);
-            checkBox4.Margin = new Padding(2);
-            checkBox4.Name = "checkBox4";
-            checkBox4.Size = new Size(93, 19);
-            checkBox4.TabIndex = 13;
-            checkBox4.Text = "Use Symbols";
-            checkBox4.UseVisualStyleBackColor = true;
-            checkBox4.CheckedChanged += checkBox4_CheckedChanged;
+            checkBox_Symbols.AutoSize = true;
+            checkBox_Symbols.Location = new Point(78, 130);
+            checkBox_Symbols.Margin = new Padding(2);
+            checkBox_Symbols.Name = "checkBox_Symbols";
+            checkBox_Symbols.Size = new Size(93, 19);
+            checkBox_Symbols.TabIndex = 13;
+            checkBox_Symbols.Text = "Use Symbols";
+            checkBox_Symbols.UseVisualStyleBackColor = true;
+            checkBox_Symbols.CheckedChanged += checkBox4_CheckedChanged;
             // 
             // createPage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(560, 270);
-            Controls.Add(checkBox4);
-            Controls.Add(checkBox3);
-            Controls.Add(checkBox2);
-            Controls.Add(checkBox1);
+            Controls.Add(checkBox_Symbols);
+            Controls.Add(checkBox_Numbers);
+            Controls.Add(checkBox_UpperCase);
+            Controls.Add(checkBox_LowerCase);
             Controls.Add(button2);
             Controls.Add(btnHide_Show);
             Controls.Add(btnGenerate);
@@ -200,9 +200,9 @@
         private SaveFileDialog saveFileDialog1;
         private Button btnHide_Show;
         private Button button2;
-        private CheckBox checkBox1;
-        private CheckBox checkBox2;
-        private CheckBox checkBox3;
-        private CheckBox checkBox4;
+        private CheckBox checkBox_LowerCase;
+        private CheckBox checkBox_UpperCase;
+        private CheckBox checkBox_Numbers;
+        private CheckBox checkBox_Symbols;
     }
 }
