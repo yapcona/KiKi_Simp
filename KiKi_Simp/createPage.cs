@@ -12,6 +12,8 @@ namespace KiKi_Simp
 {
     public partial class createPage : Form
     {
+        private bool useLowerCase = true; // Standardmäßig auf true setzen
+
         public createPage()
         {
             InitializeComponent();
@@ -34,50 +36,34 @@ namespace KiKi_Simp
 
         private void btnGenerate_Click(object sender, EventArgs e)
         {
-            int counter = 10; // password länge (INDIVIDUELL ANPASSUNG hinzufügen)
+            int counter = 10; // Passwortlänge (individuell anpassen)
             string PassLowerCase = "abcdefghijklmnopqrstuvwxyz";
             string PassUpperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
             string PassNumbers = "1234567890";
             string PassSymbols = "!§$%&/()=?-_,.:";
-            StringBuilder res = new StringBuilder(); // Create empty StringBuilder-Object
+            StringBuilder res = new StringBuilder(); // Erstelle ein leeres StringBuilder-Objekt
             Random random = new Random();
 
-            // Ensure that the password contains at least one character from each set
-            res.Append(PassLowerCase[random.Next(PassLowerCase.Length)]); //.Append
-            res.Append(PassUpperCase[random.Next(PassUpperCase.Length)]);
-            res.Append(PassNumbers[random.Next(PassNumbers.Length)]);
-            res.Append(random.Next(PassSymbols.Length));
-
-            // Fill the rest of the paswor lenght with random characters
-            string allChars = PassLowerCase + PassLowerCase + PassNumbers + PassSymbols;
-            for (int i = res.Length, i < counter; i++)
+            // Initialisiere alle möglichen Zeichen basierend auf den Checkbox-Einstellungen
+            string allChars = "";
+            if (useLowerCase)
             {
-
-            }
-
-            while (0 < counter--)
-            {
+                allChars += PassLowerCase;
                 res.Append(PassLowerCase[random.Next(PassLowerCase.Length)]);
             }
-            txtPass.Text = res.ToString();
+            allChars += PassUpperCase + PassNumbers + PassSymbols;
+            res.Append(PassUpperCase[random.Next(PassUpperCase.Length)]);
+            res.Append(PassNumbers[random.Next(PassNumbers.Length)]);
+            res.Append(PassSymbols[random.Next(PassSymbols.Length)]);
 
-            while (0 < counter--)
+            // Den Rest der Passwortlänge mit zufälligen Zeichen auffüllen
+            for (int i = res.Length; i < counter; i++)
             {
-                res.Append(PassUpperCase[random.Next(PassUpperCase.Length)]);
+                res.Append(allChars[random.Next(allChars.Length)]);
             }
-            txtPass.Text = res.ToString();
 
-            while (0 < counter--)
-            {
-                res.Append(PassNumbers[random.Next(PassNumbers.Length)]);
-            }
-            txtPass.Text = res.ToString();
-
-            while (0 < counter--)
-            {
-                res.Append(PassSymbols[random.Next(PassSymbols.Length)]);
-            }
-            txtPass.Text = res.ToString();
+            // Das Ergebnis mischen und als Text setzen
+            txtPass.Text = new string(res.ToString().OrderBy(c => random.Next()).ToArray());
         }
 
         private void btnHide_Show_Click(object sender, EventArgs e)
@@ -111,9 +97,7 @@ namespace KiKi_Simp
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if (!checkBox1.Checked) 
-            {
-                
-            }
+            useLowerCase = checkBox1.Checked;
+        }
     }
 }
