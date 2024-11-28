@@ -35,7 +35,7 @@
             btnGenerate = new Button();
             saveFileDialog1 = new SaveFileDialog();
             btnHide_Show = new Button();
-            button2 = new Button();
+            btn_copyTpClipboard = new Button();
             checkBox_LowerCase = new CheckBox();
             checkBox_UpperCase = new CheckBox();
             checkBox_Numbers = new CheckBox();
@@ -108,15 +108,16 @@
             btnHide_Show.UseVisualStyleBackColor = false;
             btnHide_Show.Click += btnHide_Show_Click;
             // 
-            // button2
+            // btn_copyTpClipboard
             // 
-            button2.Location = new Point(78, 181);
-            button2.Margin = new Padding(2);
-            button2.Name = "button2";
-            button2.Size = new Size(140, 20);
-            button2.TabIndex = 9;
-            button2.Text = "Copy To Clipboard";
-            button2.UseVisualStyleBackColor = true;
+            btn_copyTpClipboard.Location = new Point(78, 181);
+            btn_copyTpClipboard.Margin = new Padding(2);
+            btn_copyTpClipboard.Name = "btn_copyTpClipboard";
+            btn_copyTpClipboard.Size = new Size(140, 20);
+            btn_copyTpClipboard.TabIndex = 9;
+            btn_copyTpClipboard.Text = "Copy To Clipboard";
+            btn_copyTpClipboard.UseVisualStyleBackColor = true;
+            btn_copyTpClipboard.Click += button2_Click;
             // 
             // checkBox_LowerCase
             // 
@@ -175,7 +176,7 @@
             Controls.Add(checkBox_Numbers);
             Controls.Add(checkBox_UpperCase);
             Controls.Add(checkBox_LowerCase);
-            Controls.Add(button2);
+            Controls.Add(btn_copyTpClipboard);
             Controls.Add(btnHide_Show);
             Controls.Add(btnGenerate);
             Controls.Add(label3);
@@ -199,7 +200,7 @@
         private Button btnGenerate;
         private SaveFileDialog saveFileDialog1;
         private Button btnHide_Show;
-        private Button button2;
+        private Button btn_copyTpClipboard;
         private CheckBox checkBox_LowerCase;
         private CheckBox checkBox_UpperCase;
         private CheckBox checkBox_Numbers;
