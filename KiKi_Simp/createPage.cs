@@ -40,40 +40,37 @@ namespace KiKi_Simp
         private void btnGenerate_Click(object sender, EventArgs e)
         {
             int counter = 10; // Passwortlänge (will do it later: individuell anpassen)
-            string PassLowerCase = "abcdefghijklmnopqrstuvwxyz";
-            string PassUpperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-            string PassNumbers = "1234567890";
-            string PassSymbols = "!§$%&/()=?-_,.:";
+
             StringBuilder res = new StringBuilder(); // Erstelle ein leeres StringBuilder-Objekt
             Random random = new Random();
 
+
+            var charSets = new List<(string chars, bool use)>
+            {
+                ("abcdefghijklmnopqrstuvwxyz", useLowerCase),
+                ("ABCDEFGHIJKLMNOPQRSTUVWXYZ", useUpperCase),
+                ("1234567890", useNumbers),
+                ("!%&/()=?-_,.:", useSymbols)
+            };
+
             // Initialisiere alle möglichen Zeichen basierend auf den Checkbox-Einstellungen
             string allChars = "";
-            if (useLowerCase)
+
+            foreach (var (chars, use) in charSets)
             {
-                allChars += PassLowerCase;
-                res.Append(PassLowerCase[random.Next(PassLowerCase.Length)]);
+                if (use)
+                {
+                    allChars += chars;
+                    res.Append(chars[random.Next(chars.Length)]);
+                }
             }
 
-            if (useUpperCase)
+            if(string.IsNullOrEmpty(allChars))
             {
-                allChars += PassUpperCase;
-                res.Append(PassLowerCase[random.Next(PassLowerCase.Length)]);
+                MessageBox.Show("Please select at least one character!");
+                return;
             }
 
-            if (useNumbers)
-            {
-                allChars += PassNumbers;
-                res.Append(PassNumbers[random.Next(PassNumbers.Length)]);
-            }
-
-            if (useSymbols)
-            {
-                allChars += PassSymbols;
-                res.Append(PassSymbols[random.Next(PassSymbols.Length)]);
-            }
-
-   
 
             // Den Rest der Passwortlänge mit zufälligen Zeichen auffüllen
             for (int i = res.Length; i < counter; i++)
