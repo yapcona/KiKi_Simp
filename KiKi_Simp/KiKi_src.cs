@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace KiKi_Simp
 {
-    public partial class createPage : Form
+    public partial class KiKi_src : Form
     {
         // Variablen zur Steuerung der verwendeten Zeichensätze basierend auf den Checkbox-Einstellungen
         private bool useLowerCase = true; // Standardmäßig auf true setzen
@@ -18,7 +18,7 @@ namespace KiKi_Simp
         private bool useNumbers = true;
         private bool useSymbols = true;
 
-        public createPage()
+        public KiKi_src()
         {
             // Initialisiert die Komponenten der Form
             InitializeComponent();
@@ -82,7 +82,7 @@ namespace KiKi_Simp
             if (string.IsNullOrEmpty(allChars))
             {
                 // Zeigt eine Nachricht an, wenn keine Zeichenart ausgewählt wurde
-                MessageBox.Show("Bitte mindestens eine Zeichenart auswählen!");
+                MessageBox.Show("Please select at least one charactertype!");
                 return; // Beendet die Methode
             }
 

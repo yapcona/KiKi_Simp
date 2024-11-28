@@ -1,6 +1,6 @@
 ﻿namespace KiKi_Simp
 {
-    partial class createPage
+    partial class KiKi_src
     {
         /// <summary>
         /// Required designer variable.
