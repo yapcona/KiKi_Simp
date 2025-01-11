@@ -1,8 +1,6 @@
 # KiKi (Simp)
 
-**KiKi (Simp)** is a simple and lightweight Password Generator written in C# using Windows Forms. This project serves as a training exercise to develop a deeper understanding of software development with C# and .NET.
-
-Feel free to use this tool in any of your projects.
+**KiKi (Simp)** is a simple and lightweight Password Generator written in C# using Windows Forms.
 
 ## Features
 
