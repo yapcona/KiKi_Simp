@@ -1,4 +1,53 @@
-### KiKi (Simp)
-#### KiKi (Simp) is a simple and lightweight Password Generator written in C# (Windows Forms).
-This is a training project to develope more understanding for software development using C# and dotNET.
-Feel free to use this in any of your projects.
+# KiKi (Simp)
+
+**KiKi (Simp)** is a simple and lightweight Password Generator written in C# using Windows Forms. This project serves as a training exercise to develop a deeper understanding of software development with C# and .NET.
+
+Feel free to use this tool in any of your projects.
+
+## Features
+
+- **Random Password Generation**: Create secure and random passwords of varying lengths and complexities.
+- **User-friendly Interface**: Easy-to-use Windows Forms interface that allows for intuitive interaction.
+- **Customizable Options**: Adjust settings to include uppercase letters, lowercase letters, numbers, and special characters.
+- **Lightweight**: Minimalistic design ensuring it runs efficiently even on older hardware.
+
+## Requirements
+
+- **.NET Framework 4.7.2** or higher
+- **Windows Operating System** (Windows 7 or higher)
+
+## Installation
+
+1. **Clone the repository**:
+    ```bash
+    git clone https://github.com/your-username/kiki-simp.git
+    ```
+
+2. **Open the solution** in Visual Studio:
+    - Open the `KiKiSimp.sln` file in Visual Studio.
+
+3. **Build the project**:
+    - Ensure you have .NET Framework 4.7.2 or higher installed.
+    - Build the solution using Visual Studio.
+
+4. **Run the application**:
+    - Start the application from Visual Studio or run the compiled executable from the `bin` directory.
+
+## Project Goals
+
+This project was created to:
+- Gain hands-on experience with C# and Windows Forms.
+- Understand the basics of random string generation and secure password creation.
+- Develop a lightweight and efficient desktop application.
+
+## Contributions
+
+Feel free to contribute to this project by submitting issues, pull requests, or suggestions. Collaboration is always welcome!
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+Thank you for using KiKi (Simp)! We hope you find it useful <3
