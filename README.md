@@ -20,7 +20,7 @@ Feel free to use this tool in any of your projects.
 
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/your-username/kiki-simp.git
+    git clone https://github.com/yapcona/KiKi_Simp.git
     ```
 
 2. **Open the solution** in Visual Studio:
