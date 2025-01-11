@@ -47,7 +47,3 @@ Feel free to contribute to this project by submitting issues, pull requests, or 
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
-
----
-
-Thank you for using KiKi (Simp)! We hope you find it useful <3
